@@ -143,7 +143,7 @@ header {
 	position: fixed;
 	top: -100vh;  /*hiding the header */
 	z-index: 50;
-	background: linear-gradient(to top, #ffee00, #ff8800);
+	background: linear-gradient(to top, #b48c0a, #ff3c00);
 	border-bottom-right-radius: 100%;
 	border-bottom-left-radius: 100%;
 	transition: all 650ms cubic-bezier(1,0,0,1);
@@ -684,12 +684,24 @@ li {
 
 
 
+
+
+
+
 /*media queries begining*/
 
+
+/*tablets and small ipads*/
 @media screen and (max-width:768px) {
+	
+	* {
+		text-align: center;
+	}
+	
 	body {
 		background: url("images/background-colour.jpg") no-repeat center fixed;
 		background-size: cover;
+		overflow-x: hidden;
 	}
 
 	.landing-text h1{
@@ -751,14 +763,128 @@ li {
 
 }
 
-@media (min-device-height: 667px) and (min-device-width: 375px) and (-webkit-min-device-pixel-ratio: 3){
+
+
+
+
+
+
+/*large tablets (ie - ipad pro) */
+@media screen and (max-width:1025px) {
+
+	.top-nav {
+		width: 100%;
+		height: 100%;
+		position: fixed;
+		top: -150vh;  /*hiding the header */
+		z-index: 50;
+		background: linear-gradient(to top, #ffee00, #ff8800);
+		border-bottom-right-radius: 100%;
+		border-bottom-left-radius: 100%;
+		transition: all 650ms cubic-bezier(1,0,0,1);
+	}
+
+	
+	* {
+		text-align: center;
+	}
+	
+	html, body {
+		overflow-x: hidden;
+	}
+
+	body {
+		background: url("images/background-colour.jpg") no-repeat center fixed;
+		background-size: cover;
+		overflow-x: hidden;
+	}
+
+	.landing-text h1{
+		font-size: 15rem;
+	}
+
+	.landing-text h6{
+		font-size: 1.7rem;
+	}
+
+	.nav-list {
+		flex-direction: column;
+	}
+
+	li {
+		margin: 2rem 0;
+	}
+
+	.nav-link {
+		font-size: 5.5rem;
+	}
+
+	.about-heading h1 {
+		font-size: 8rem;
+	}
+
+	.section-heading h1 {
+		font-size: 3rem;
+	}
+
+	.about-details .nav-list {
+		flex-direction: initial;
+	}
+
+	.about-details li {
+		margin: 0 2rem;
+	}
+
+	.icon-container {
+		width: 7rem;
+		height: 7rem;
+	}
+
+	.icon-container i {
+		font-size: 4rem;
+	}
+
+	.timeline ul {
+		margin: 0 0 0 auto;
+	}
+
+	.timeline .date::before {
+		left: -20rem;
+	}
+
+	.timeline .date::after {
+		left: -5.9rem;
+	}
+
+	.experience .timeline {
+		margin-right: 15rem;
+	}
+
+
+}
+
+
+
+
+
+
+
+/*smartphones*/
+@media screen and (max-width: 500px){
+	
+	html, body {
+		overflow-x: hidden;
+	  }
+	 
+	
 	.menu-toggler{
 		top: 2rem;
-		right: 2rem;
+	 	right: 2rem;
 	}
 
 	.landing-text h1 {
-		font-size: 8rem;
+		font-size: 5.5rem;
+		
 	}
 
 	.landing-text h6 {
@@ -775,6 +901,13 @@ li {
 
 	.profile-img {
 		margin: 0 0 7rem 0;
+		all: none;
+		display: inline-block;
+		padding-top: 5rem;
+		overflow: hidden;
+		width: 300px;
+		height: 300px;
+		
 	}
 
 	.portfolio-item {
@@ -784,6 +917,12 @@ li {
 	.portfolio-img {
 		margin: 0 0 2rem 0;
 		order: 1;
+		all: none;
+		display: inline-block;
+		padding-top: 5rem;
+		overflow: hidden;
+		width: 300px;
+		height: 300px;
 	}
 
 	.portfolio-description {
@@ -807,6 +946,10 @@ li {
 		right: 2rem;
 	}
 
+	.experience .timeline {
+		all: none;
+		margin: 0 0 0 0;
+	}
 
 }
 
