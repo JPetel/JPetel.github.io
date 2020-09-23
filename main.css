@@ -50,10 +50,6 @@ img {
 
 
 
-
-
-
-
 /*Start reusable*/
 
 .container {
@@ -484,14 +480,27 @@ li {
 	display: inline-block;
 	padding-top: 5rem;
   	overflow: hidden;
- 	width: 500px;
-  	height: 500px;
+ 	width: 450px;
+	height: 450px;
+	
 }
 
 .portfolio-img:hover {
 	opacity: 0.6;
 	transition: 400ms;
 }
+
+.portfolio-img-ios {
+	all: none;
+	display: inline-block;
+	padding-top: 5rem;
+  	overflow: hidden;
+ 	width: 200px;
+	height: 500px;
+
+}
+
+
 
 
 /*End portfolio*/
